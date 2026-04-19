@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 코드 어시스트 랜딩</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563eb',
+              indigoSoft: '#818cf8',
+              surface: '#f9f9ff',
+              slateSoft: '#5a5e6f'
+            },
+            fontFamily: {
+              sans: ['Manrope', 'Pretendard', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="bg-surface text-slate-900 antialiased">
+    <header class="sticky top-0 z-20 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+      <div class="mx-auto grid h-16 w-full max-w-6xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6">
+        <strong class="text-xl font-extrabold tracking-tight">CodeGuided<span class="text-primary">.</span></strong>
+        <nav class="hidden items-center justify-center gap-7 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 md:flex">
+          <a class="hover:text-primary" href="#solution">Course</a>
+          <a class="hover:text-primary" href="#curriculum">Curriculum</a>
+          <a class="hover:text-primary" href="#trust">Testimonials</a>
+          <a class="hover:text-primary" href="#consulting">Consulting</a>
+        </nav>
+        <div class="flex items-center justify-end gap-4">
+          <button class="hidden text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 md:inline-flex">Sign in</button>
+          <a class="btn btn-dark" href="#consult-form" data-scroll-to-form="#consult-form">무료 상담</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="section-gap">
+        <div class="mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
+          <div>
+            <p class="pill mb-6">비전공자 맞춤 AI 코딩 입문</p>
+            <h1 class="text-4xl font-extrabold leading-tight md:text-5xl">
+              비전공자도<br />AI와 함께<br />코드를 완성합니다
+            </h1>
+            <p class="mt-6 max-w-xl text-lg text-slateSoft">
+              문법 암기보다 결과물 중심으로 학습합니다. 처음부터 AI를 실전 파트너로 활용해,
+              실제로 동작하는 서비스를 빠르게 만들어봅니다.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="btn btn-primary" href="#consult-form" data-scroll-to-form="#consult-form">상담 예약하기</a>
+              <a class="btn btn-secondary" href="#consult-form" data-scroll-to-form="#consult-form">커리큘럼 받기</a>
+            </div>
+          </div>
+          <div class="hero-visual-wrap">
+            <article class="hero-visual">
+              <div class="hero-media-shell">
+                <div class="hero-media-overlay"></div>
+                <div class="hero-visual-terminal">
+                  <p class="terminal-title">LIFESTYLE</p>
+                  <ul>
+                    <li><span class="token-key">const</span> coach = <span class="token-value">createAIMentor()</span>;</li>
+                    <li>coach.plan(<span class="token-string">"8-week AI curriculum"</span>);</li>
+                    <li>coach.build(<span class="token-string">"education portfolio"</span>);</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="hero-visual-caption">AI 코치와 함께 매주 결과물을 완성하는 학습 플로우</p>
+            </article>
+            <aside class="hero-float card">
+              <p class="hero-float-title">AI Pairing</p>
+              <p class="hero-float-text">막히는 순간 즉시 해결 루프를 돌려 학습 속도를 유지합니다.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="pain-points" class="section-gap bg-white">
+        <div class="mx-auto w-full max-w-6xl px-6 py-20">
+          <h2 class="section-title">비전공자가 자주 겪는 3가지 문제</h2>
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="card p-7">
+              <p class="eyebrow">01 BARRIER</p>
+              <h3 class="mt-2 text-xl font-bold">문법 공부만 하다 포기</h3>
+              <p class="mt-3 text-slateSoft">무엇을 만들어야 하는지 모르니 흥미가 빨리 떨어집니다.</p>
+            </article>
+            <article class="card p-7">
+              <p class="eyebrow">02 BARRIER</p>
+              <h3 class="mt-2 text-xl font-bold">에러가 나오면 멈춤</h3>
+              <p class="mt-3 text-slateSoft">검색해도 내 코드에 맞게 적용하기 어려워 학습이 중단됩니다.</p>
+            </article>
+            <article class="card p-7">
+              <p class="eyebrow">03 BARRIER</p>
+              <h3 class="mt-2 text-xl font-bold">실무와 거리감</h3>
+              <p class="mt-3 text-slateSoft">이론 중심 강의만 듣고 실제 프로젝트 경험이 부족합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="section-gap">
+        <div class="mx-auto w-full max-w-6xl px-6 py-20">
+          <h2 class="section-title">CodeGuided 해결 방식</h2>
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="card p-7">
+              <h3 class="text-xl font-bold">AI 페어 코딩</h3>
+              <p class="mt-3 text-slateSoft">질문-수정-검증 루프를 통해 에러 해결 역량을 빠르게 키웁니다.</p>
+            </article>
+            <article class="card p-7">
+              <h3 class="text-xl font-bold">프로젝트 중심 학습</h3>
+              <p class="mt-3 text-slateSoft">매주 결과물을 만들며 성취감을 유지하고 포트폴리오를 축적합니다.</p>
+            </article>
+            <article class="card p-7">
+              <h3 class="text-xl font-bold">멘토 피드백</h3>
+              <p class="mt-3 text-slateSoft">비전공자 눈높이 피드백으로 방향을 잃지 않도록 돕습니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="curriculum" class="section-gap bg-white">
+        <div class="mx-auto w-full max-w-6xl px-6 py-20">
+          <h2 class="section-title">8주 AI 커리큘럼</h2>
+          <ol class="roadmap-stepper mt-12" aria-label="8주 로드맵">
+            <li class="roadmap-item">
+              <span class="roadmap-dot" aria-hidden="true"></span>
+              <article class="roadmap-card card">
+                <p class="roadmap-label">WEEK 1-2</p>
+                <h3>AI 활용 개발 환경 구축</h3>
+                <p>프롬프트 기초와 개발 루틴을 세팅해 시작 장벽을 낮춥니다.</p>
+              </article>
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot" aria-hidden="true"></span>
+              <article class="roadmap-card card">
+                <p class="roadmap-label">WEEK 3-4</p>
+                <h3>랜딩/대시보드 UI 구현</h3>
+                <p>레이아웃과 컴포넌트를 완성하며 반응형 UI를 실전으로 익힙니다.</p>
+              </article>
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot" aria-hidden="true"></span>
+              <article class="roadmap-card card">
+                <p class="roadmap-label">WEEK 5-6</p>
+                <h3>상호작용/상태 관리 로직 작성</h3>
+                <p>사용자 액션과 데이터 흐름을 연결해 동적인 화면을 구현합니다.</p>
+              </article>
+            </li>
+            <li class="roadmap-item">
+              <span class="roadmap-dot" aria-hidden="true"></span>
+              <article class="roadmap-card card">
+                <p class="roadmap-label roadmap-label-final">FINAL</p>
+                <h3>최종 프로젝트 배포와 개선</h3>
+                <p>서비스를 실제로 배포하고 피드백 기반 개선 사이클을 완성합니다.</p>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="trust" class="section-gap">
+        <div class="mx-auto w-full max-w-6xl px-6 py-20">
+          <h2 class="section-title">수강생 신뢰 후기</h2>
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <blockquote class="card p-8">
+              <p class="text-lg leading-relaxed">"에러를 두려워하지 않게 됐고, 실무 자동화 툴을 직접 만들었습니다."</p>
+              <footer class="mt-4 text-sm text-slateSoft">마케터 · 김OO</footer>
+            </blockquote>
+            <blockquote class="card p-8">
+              <p class="text-lg leading-relaxed">"어려운 개념을 비전공자 언어로 설명해줘서 진도가 꾸준히 나갑니다."</p>
+              <footer class="mt-4 text-sm text-slateSoft">디자이너 · 이OO</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="consulting" class="section-gap bg-primary">
+        <div class="mx-auto w-full max-w-4xl px-6 py-20">
+          <div class="consult-card">
+            <div class="text-center">
+              <h2 class="text-3xl font-extrabold text-slate-900 md:text-4xl">당신의 첫 코딩, 부담 없이 시작하세요</h2>
+              <p class="mx-auto mt-4 max-w-2xl text-base text-slateSoft md:text-lg">
+                목표와 현재 수준을 바탕으로 1:1 학습 루트를 안내해드립니다.
+              </p>
+            </div>
+            <form id="consult-form" class="mx-auto mt-10 w-full max-w-xl" aria-label="상담 신청 폼">
+              <p id="form-feedback" class="text-sm" role="status" aria-live="polite"></p>
+              <div class="mt-4 grid gap-4">
+                <label class="field-label" for="name">이름</label>
+                <input id="name" name="name" class="field" type="text" placeholder="홍길동" required autocomplete="name" />
+
+                <label class="field-label" for="phone">연락처</label>
+                <input id="phone" name="phone" class="field" type="tel" placeholder="010-0000-0000" required autocomplete="tel" inputmode="tel" />
+
+                <label class="field-label" for="message">상담 내용</label>
+                <textarea id="message" name="message" class="field min-h-28" placeholder="궁금한 점을 적어주세요."></textarea>
+
+                <button class="btn btn-dark mt-2 w-full" type="submit">상담 요청 보내기</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./assets/main.js"></script>
+  </body>
+</html>
